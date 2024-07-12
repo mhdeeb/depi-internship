@@ -10,7 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # permissions: write-all
+    permissions:
+      contents: write
 
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
