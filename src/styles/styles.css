@@ -1,5 +1,109 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 300 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+}
+
+header {
+  background-image: linear-gradient(270deg, #00000000, #161c2d),
+    url("../assets/bg-hero.png");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  height: 676px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-inline: 2.5rem auto;
+  gap: 5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: #cac7fc;
+}
+
+.title {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+
+.head-content {
+  margin: 8rem 25rem;
+  width: 500px;
+}
+
+.head-content h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.head-content p {
+  font-size: 1.9rem;
+  margin-block: 3rem;
+}
+
+.btn,
+.btn-arr {
+  background-color: #473bf0;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-arr:hover {
+  background-color: #3a2de3;
+}
+
+.btn-arr::after {
+  content: url("../assets/tail-right.svg");
+  margin-inline-start: 4rem;
 }
