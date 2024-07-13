@@ -16,6 +16,46 @@
   font-weight: bold;
 }
 
+@keyframes hero-h-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-p-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grad {
+  0% {
+    background-position-y: 50%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +78,7 @@ header {
   background-position: center;
   height: 676px;
   color: white;
+  animation: grad 2s forwards;
 }
 
 nav {
@@ -54,21 +95,35 @@ nav ul {
   gap: 5rem;
   font-size: 1.5rem;
   font-weight: bold;
+  align-items: baseline;
+  animation: appear 1s;
 }
 
 nav a {
+  display: inline-block;
   text-decoration: none;
   color: white;
+  transition: transform 100ms, text-shadow 100ms, color 100ms;
 }
 
 nav a:hover {
   color: #cac7fc;
+  text-shadow: 0px 0px 5px black;
+  transform: scale(1.05);
 }
 
 .title {
   font-family: "Rubik", sans-serif;
   font-weight: bold;
   font-size: 2.8rem;
+  margin-inline-start: 1rem;
+  animation: appear 0.5s;
+}
+
+.title:hover {
+  text-shadow: 0px 0px 20px black;
+  color: inherit;
+  transform: none;
 }
 
 .head-content {
@@ -79,11 +134,14 @@ nav a:hover {
 .head-content h1 {
   font-size: 6rem;
   font-weight: bold;
+  animation: hero-h-anim 1s ease-out;
 }
 
 .head-content p {
+  opacity: 0;
   font-size: 1.9rem;
   margin-block: 3rem;
+  animation: hero-p-anim 1s ease-out 0.5s forwards;
 }
 
 .btn,
@@ -96,11 +154,21 @@ nav a:hover {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: transform 50ms, background-color 0.1s;
+  animation: appear 0.5s;
 }
 
 .btn:hover,
 .btn-arr:hover {
   background-color: #3a2de3;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+.btn:active,
+.btn-arr:active {
+  background-color: #594ef3;
+  transform: scale(0.98);
 }
 
 .btn-arr::after {
