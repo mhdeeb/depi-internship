@@ -162,7 +162,7 @@ nav a:hover {
 .btn-arr:hover {
   background-color: #3a2de3;
   box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .btn:active,
