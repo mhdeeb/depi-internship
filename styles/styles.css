@@ -49,10 +49,10 @@
 
 @keyframes grad {
   0% {
-    background-position-y: 50%;
+    background-position-y: bottom;
   }
   100% {
-    background-position-y: 100%;
+    background-position-y: center;
   }
 }
 
@@ -75,7 +75,6 @@ header {
     url("../assets/bg-hero.webp");
   background-blend-mode: multiply;
   background-size: cover;
-  background-position: center;
   height: 676px;
   color: white;
   animation: grad 2s forwards;
