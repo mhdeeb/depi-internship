@@ -132,13 +132,13 @@ nav a:hover {
 .head-content {
   margin: 8rem 25rem;
   width: 50rem;
-  height: 34rem;
 }
 
 .head-content h1 {
   font-size: 6rem;
   font-weight: bold;
   animation: hero-h-anim 1s ease-out;
+  min-height: 15rem;
 }
 
 .head-content p {
@@ -146,6 +146,7 @@ nav a:hover {
   font-size: 1.9rem;
   margin-block: 3rem;
   animation: hero-p-anim 1s ease-out 0.5s forwards;
+  min-height: 7rem;
 }
 
 .btn,
