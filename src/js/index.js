@@ -5,15 +5,13 @@ function getStartedButton() {
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-  const progressiveImages = document.getElementsByClassName(
-    "progressive-replace"
-  );
+  const progressiveImages =
+    document.getElementsByClassName("progressive-after");
 
   for (const progressiveImage of progressiveImages) {
     progressiveImage.addEventListener("load", () => {
-      const target = progressiveImage.nextElementSibling;
-      target.src = progressiveImage.src;
-      target.classList.add("progressive-reveal");
+      progressiveImage.get
+      progressiveImage.classList.add("progressive-reveal");
     });
   }
 });

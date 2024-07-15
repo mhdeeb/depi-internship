@@ -74,7 +74,6 @@ header {
   position: absolute;
   width: 100%;
   z-index: -2;
-  filter: blur(10px);
 }
 
 .hero-overlay {
@@ -180,8 +179,13 @@ nav a:hover {
   margin-inline-start: 4rem;
 }
 
-.progressive-replace {
-  display: none;
+.progressive-before {
+  filter: blur(10px);
+}
+
+.progressive-after {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
 .progressive-reveal {
@@ -190,6 +194,6 @@ nav a:hover {
 
 @keyframes progressiveReveal {
   to {
-    filter: blur(0);
+    opacity: 1;
   }
 }
