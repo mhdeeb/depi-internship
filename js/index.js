@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   for (const progressiveImage of progressiveImages) {
     progressiveImage.addEventListener("load", () => {
-      progressiveImage.get
       progressiveImage.classList.add("progressive-reveal");
     });
   }
