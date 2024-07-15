@@ -47,15 +47,6 @@
   }
 }
 
-@keyframes grad {
-  0% {
-    background-position-y: bottom;
-  }
-  100% {
-    background-position-y: center;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -68,16 +59,31 @@ html {
 
 body {
   font-family: "Gilroy", sans-serif;
+  background-color: #161c2d;
 }
 
 header {
-  background-image: linear-gradient(270deg, #00000000, #161c2d),
-    url("../assets/bg-hero.webp");
-  background-blend-mode: multiply;
-  background-size: cover;
+  position: relative;
   height: 676px;
+  overflow: hidden;
   color: white;
-  animation: grad 2s forwards;
+}
+
+.hero {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+  filter: blur(10px);
+}
+
+.hero-overlay {
+  background-image: linear-gradient(270deg, #00000000, #161c2d);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
 nav {
@@ -102,13 +108,12 @@ nav a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  transition: transform 100ms, text-shadow 100ms, color 100ms;
+  transition: text-shadow 250ms, color 250ms;
 }
 
 nav a:hover {
   color: #cac7fc;
   text-shadow: 0px 0px 5px black;
-  transform: scale(1.05);
 }
 
 .title {
@@ -127,7 +132,7 @@ nav a:hover {
 
 .head-content {
   margin: 8rem 25rem;
-  width: 500px;
+  width: 55rem;
 }
 
 .head-content h1 {
@@ -153,7 +158,7 @@ nav a:hover {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  transition: transform 50ms, background-color 0.1s;
+  transition: transform 0.1s, background-color 0.1s;
   animation: appear 0.5s;
 }
 
@@ -167,10 +172,27 @@ nav a:hover {
 .btn:active,
 .btn-arr:active {
   background-color: #594ef3;
-  transform: scale(0.98);
+  transform: scale(1);
 }
 
 .btn-arr::after {
   content: url("../assets/tail-right.svg");
   margin-inline-start: 4rem;
+}
+
+.progressive-replace {
+  display: none;
+}
+
+.progressive-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: progressiveReveal 1s linear forwards;
+}
+
+@keyframes progressiveReveal {
+  to {
+    filter: blur(0);
+  }
 }
