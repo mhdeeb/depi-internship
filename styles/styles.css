@@ -72,6 +72,7 @@ header {
 .hero {
   content: "";
   position: absolute;
+  width: 100%;
   z-index: -2;
   filter: blur(10px);
 }
@@ -184,8 +185,7 @@ nav a:hover {
 }
 
 .progressive-reveal {
-  width: 100%;
-  animation: progressiveReveal 500ms linear forwards;
+  animation: progressiveReveal 1s linear forwards;
 }
 
 @keyframes progressiveReveal {
