@@ -24,11 +24,14 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
 }
 
 body {
   font-family: "Gilroy", sans-serif;
   background-color: #161c2d;
+  height: 4541px;
 }
 
 header {
@@ -83,6 +86,26 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   padding: 2rem 4rem;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition: background-color 0.25s;
+  animation: appear 3s;
+}
+
+html:not([data-scroll="0"]) {
+  nav {
+    background-color: #161c2d55;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+  }
+}
+
+@media (scroll-padding-top: 100px) {
+  nav {
+    padding: 2rem 4rem;
+  }
 }
 
 @keyframes appear {
@@ -102,7 +125,6 @@ nav ul {
   font-size: 1.5rem;
   font-weight: bold;
   align-items: baseline;
-  animation: appear 3s;
 }
 
 nav a {
@@ -122,7 +144,6 @@ nav a:hover {
   font-weight: bold;
   font-size: 2.8rem;
   margin-inline-start: 1rem;
-  animation: appear 1s;
 }
 
 .title:hover {
@@ -132,7 +153,7 @@ nav a:hover {
 }
 
 .head-content {
-  margin: 8rem 25rem;
+  margin: 20rem 25rem 8rem;
   width: 50rem;
 }
 
@@ -210,7 +231,7 @@ section {
   background-color: white;
 }
 
-section#stats {
+section#facts {
   height: 213px;
   display: flex;
   justify-content: center;
@@ -219,18 +240,18 @@ section#stats {
   border-bottom: 1px solid #e7e9ed;
 }
 
-.stat {
+.fact {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
 
-.stat h2 {
+.fact h2 {
   font-size: 4.8rem;
   font-weight: bold;
 }
 
-.stat p {
+.fact p {
   font-size: 1.7rem;
   width: 17rem;
 }
