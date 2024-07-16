@@ -5,12 +5,16 @@ function getStartedButton() {
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-  const progressiveImages =
-    document.getElementsByClassName("progressive-after");
-
-  for (const progressiveImage of progressiveImages) {
-    progressiveImage.addEventListener("load", () => {
-      progressiveImage.classList.add("progressive-reveal");
-    });
-  }
+  const progressiveImages = document.querySelectorAll(".progressive");
+  progressiveImages.forEach((progressiveDev) => {
+    const progressiveImage = progressiveDev.querySelector("img");
+    if (progressiveImage.complete) {
+      progressiveDev.classList.add("loaded");
+      progressiveDev.style.filter = "blur(0)";
+    } else
+      progressiveImage.addEventListener("load", () => {
+        progressiveDev.classList.add("loaded");
+        progressiveDev.style.filter = "blur(0)";
+      });
+  });
 });
