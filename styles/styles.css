@@ -46,7 +46,6 @@ header {
 }
 
 .progressive {
-  background-image: url("../assets/bg-hero-small.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -204,4 +203,101 @@ nav a:hover {
 .btn-arr::after {
   content: url("../assets/tail-right.svg");
   margin-inline-start: 4rem;
+}
+
+section {
+  width: 100%;
+  background-color: white;
+}
+
+section#stats {
+  height: 213px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.5rem;
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.stat h2 {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.stat p {
+  font-size: 1.7rem;
+  width: 17rem;
+}
+
+section#services {
+  height: 647px;
+  padding: 1rem 1rem;
+}
+
+section#services h2 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-block-start: 8rem;
+}
+
+section#services p {
+  font-size: 1.9rem;
+  text-align: center;
+  width: 50rem;
+  margin-block-start: 1.7rem;
+  margin-inline: auto;
+  color: #161c2d;
+  line-height: 32px;
+  opacity: 0.7;
+}
+
+.services-available {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 4rem;
+  margin-block-start: 9.2rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #e7e9ed;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 200ms, transform 200ms;
+}
+
+.service:hover {
+  box-shadow: 0px 0px 20px #00000033;
+  transform: scale(1.02);
+}
+
+.service div.progressive > img {
+  width: 255px;
+  height: 169px;
+  position: static;
+}
+
+.service span {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #161c2d;
+}
+
+.service-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding-block: 1.5rem;
 }
