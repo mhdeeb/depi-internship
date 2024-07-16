@@ -42,6 +42,13 @@ jobs:
           name: github-pages
           retention-days: 1
 
+      - name: report-build-status
+        run: gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" -F github_run_id="$GITHUB_RUN_ID" -F conclusion="$CONCLUSION"
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONCLUSION: ${{ job.status }}
+
       - name: Deploy
         uses: actions/deploy-pages@v4
         with:
