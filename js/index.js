@@ -1,7 +1,7 @@
 console.log("JavaScript loaded successfully!");
 
 function getStartedButton() {
-  window.location.href = "pages/form.html";
+  window.location.href = "depi-internship/pages/form.html";
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
