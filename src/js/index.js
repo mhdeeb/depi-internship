@@ -1,7 +1,7 @@
 console.log("JavaScript loaded successfully!");
 
 function getStartedButton() {
-  window.location.href = "pages/form.html";
+  window.location.href = "pages/form";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
