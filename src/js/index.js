@@ -4,7 +4,7 @@ function getStartedButton() {
   window.location.href = "depi-internship/pages/form.html";
 }
 
-document.addEventListener("DOMContentLoaded", function (e) {
+document.addEventListener("DOMContentLoaded", () => {
   const progressiveImages = document.querySelectorAll(".progressive");
   progressiveImages.forEach((progressiveDev) => {
     const progressiveImage = progressiveDev.querySelector("img");
@@ -16,6 +16,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
         progressiveDev.classList.add("loaded");
         progressiveDev.style.filter = "blur(0)";
       });
+  });
+
+  var playButton = document.getElementById("play-btn");
+  var video = document.getElementById("video");
+  playButton.addEventListener("click", () => {
+    if (video.paused == true) {
+      video.play();
+      video.controls = true;
+      playButton.style.display = "none";
+    } else {
+      video.pause();
+    }
+  });
+  video.addEventListener("ended", () => {
+    playButton.style.display = "flex";
+    video.controls = false;
   });
 });
 
