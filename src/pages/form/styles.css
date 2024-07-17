@@ -52,3 +52,8 @@ section#form {
   background-position: center;
   background-size: cover;
 }
+
+footer {
+  background-color: var(--bg-color);
+  height: 242px;
+}
