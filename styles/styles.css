@@ -115,12 +115,6 @@ html:not([data-scroll="0"]) {
   }
 }
 
-@media (scroll-padding-top: 100px) {
-  nav {
-    padding: 2rem 4rem;
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
