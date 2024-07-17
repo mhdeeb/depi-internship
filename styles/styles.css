@@ -110,6 +110,7 @@ nav {
 html:not([data-scroll="0"]) {
   nav {
     background-color: #161c2d55;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 20px var(--shadow-color);
   }
@@ -148,8 +149,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #cac7fc;
-  text-shadow: 0px 0px 5px var(--shadow-color);
+  color: hsl(from var(--secondary-color) h s calc(l + 5));
+  text-shadow: 0px 0px 10px var(--shadow-color);
 }
 
 .title {
@@ -335,5 +336,26 @@ section#services p {
 }
 
 section#perks {
-  height: 945px;
+  height: 849px;
+  background-color: var(--bg-perks);
+}
+
+section#alert {
+  height: 96px;
+  background-color: var(--secondary-color);
+}
+
+section#testimonial {
+  height: 503px;
+}
+
+section#form {
+}
+
+section#cta {
+  height: 242px;
+}
+
+footer {
+  height: 533px;
 }
