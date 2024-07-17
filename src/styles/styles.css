@@ -457,7 +457,7 @@ section#alert span:first-child {
   color: var(--secondary-color);
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 5cap;
+  border-radius: 10rem;
   padding: 0.55rem 1.25rem;
   letter-spacing: 0.163rem;
 }
