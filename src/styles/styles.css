@@ -364,6 +364,7 @@ video {
 .demo .video {
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 31px 34px -20px var(--shadow-color);
 }
 
 #play-btn {
@@ -443,6 +444,30 @@ video {
 section#alert {
   height: 96px;
   background-color: var(--secondary-color);
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.7rem;
+}
+
+section#alert span:first-child {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5cap;
+  padding: 0.55rem 1.25rem;
+  letter-spacing: 0.163rem;
+}
+
+section#alert a {
+  color: var(--bg-color);
+}
+
+section#alert a:hover {
+  color: var(--text-color);
 }
 
 section#testimonial {
