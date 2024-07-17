@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  var playButton = document.getElementById("play-btn");
-  var video = document.getElementById("video");
+  let playButton = document.getElementById("play-btn");
+  let video = document.getElementById("video");
   playButton.addEventListener("click", () => {
-    if (video.paused == true) {
+    if (video.paused) {
       video.play();
       video.controls = true;
       playButton.style.display = "none";
