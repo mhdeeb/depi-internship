@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   video.addEventListener("ended", () => {
     playButton.style.display = "flex";
     video.controls = false;
+    document.exitFullscreen();
   });
 });
 
