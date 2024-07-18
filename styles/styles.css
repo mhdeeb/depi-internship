@@ -45,6 +45,10 @@ body {
   color: var(--text-color);
 }
 
+.container {
+  max-width: 111rem;
+}
+
 header {
   position: relative;
   height: 676px;
@@ -63,7 +67,6 @@ header {
 .progressive {
   background-size: cover;
   background-position: center;
-  background-blend-mode: multiply;
   height: 100%;
   filter: blur(20px);
 }
