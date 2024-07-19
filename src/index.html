@@ -9,454 +9,496 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Mohamed El-Deeb" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/Chat.svg" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="js/index.js"></script>
+    <link rel="icon" href="./assets/images/Chat.svg" />
+    <link rel="stylesheet" href="styles/mainStyle.css" />
+    <script src="scripts/index.js"></script>
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
     <title>Consultation</title>
   </head>
   <body>
-    <header>
-      <div class="hero">
-        <div
-          class="progressive"
-          style="background-image: url('assets/bg-hero-small.webp')"
-        >
-          <img
-            src="assets/bg-hero.webp"
-            alt="header background"
-            loading="lazy"
-          />
-          <div class="hero-overlay"></div>
-        </div>
+    <header class="background-container">
+      <div class="progressive bg--hero-small header__overlay background">
+        <img
+          class="background"
+          src="./assets/images/bg-hero.webp"
+          alt="Header Background"
+          loading="lazy"
+        />
       </div>
-      <nav>
-        <h1><a href="#" class="title">Brainwave.io</a></h1>
-        <ul>
-          <li><a href="#facts">Facts</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#perks">Perks</a></li>
-          <li><a href="#testimonial">Testimonial</a></li>
-          <li><a href="#footer">End</a></li>
-        </ul>
-        <button type="button" class="btn" onclick="getStartedButton()">
-          Get started now
-        </button>
-      </nav>
-      <div class="head-content">
-        <h1>Get help from the expert&nbsp;consultants.</h1>
-        <p>With lots of unique blocks, you can easily build a page without
-          coding. Build your next consultancy website within few minutes.</p>
-        <button type="button" class="btn-arr" onclick="getStartedButton()">
-          Get started now
-        </button>
+      <div class="nav-bar">
+        <a href="#"
+          ><img src="./assets/images/logo.svg" alt="Company Logo"
+        /></a>
+        <nav>
+          <ul>
+            <li><a href="#facts">Facts</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#perks">Perks</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#footer">End</a></li>
+          </ul>
+        </nav>
+        <a href="pages/form" class="btn">Get started now</a>
+      </div>
+      <div class="container">
+        <div class="head-content">
+          <h1>Get help from the expert&nbsp;consultants.</h1>
+          <p>
+            With lots of unique blocks, you can easily build a page without
+            coding. Build your next consultancy website within few minutes.
+          </p>
+          <a href="pages/form" class="btn btn--arr">Get started now</a>
+        </div>
       </div>
     </header>
     <main>
       <section id="facts">
-        <div class="fact">
-          <h2>1M+</h2>
-          <p>Customers visit Albino every months</p>
-        </div>
-        <div class="fact">
-          <h2>93%</h2>
-          <p>Satisfaction rate from our customers.</p>
-        </div>
-        <div class="fact">
-          <h2>4.9</h2>
-          <p>Average customer ratings out of 5.00!</p>
+        <div class="container">
+          <div class="fact">
+            <span>1M+</span>
+            <span>Customers visit Albino every months</span>
+          </div>
+          <div class="fact">
+            <span>93%</span>
+            <span>Satisfaction rate from our customers.</span>
+          </div>
+          <div class="fact">
+            <span>4.9</span>
+            <span>Average customer ratings out of 5.00!</span>
+          </div>
         </div>
       </section>
-      <section id="services">
-        <div class="section-heading">
-          <h2>Services we offer for you</h2>
-          <p>With lots of unique blocks, you can easily build a page without
-            coding. Build your next landing page.</p>
-        </div>
-        <div class="services-available">
+      <section id="services" class="container">
+        <h2>Services we offer for you</h2>
+        <p>
+          With lots of unique blocks, you can easily build a page without
+          coding. Build your next landing page.
+        </p>
+        <div class="services__service-container">
           <a class="service" href="#digital_marketing">
             <div class="progressive">
               <img
-                src="assets/service-1.webp"
+                src="./assets/images/service-1.webp"
                 alt="Digital Marketing"
                 loading="lazy"
               />
             </div>
-            <div class="service-text">
-              <span>Digital Marketing</span>
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-                <path
-                  d="M1 7.4012H13.1333"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-              </svg>
-            </div>
+            <span>Digital Marketing</span>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M1 7.4012H13.1333"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
           </a>
           <a class="service" href="#content_writing">
             <div class="progressive">
               <img
-                src="assets/service-2.webp"
+                src="./assets/images/service-2.webp"
                 alt="Content Writing"
                 loading="lazy"
               />
             </div>
-            <div class="service-text">
-              <span>Content Writing</span>
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-                <path
-                  d="M1 7.4012H13.1333"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-              </svg>
-            </div>
+            <span>Content Writing</span>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M1 7.4012H13.1333"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
           </a>
           <a class="service" href="#graphic_design">
             <div class="progressive">
               <img
-                src="assets/service-3.webp"
+                src="./assets/images/service-3.webp"
                 alt="Graphic Design"
                 loading="lazy"
               />
             </div>
-            <div class="service-text">
-              <span>Graphic Design</span>
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-                <path
-                  d="M1 7.4012H13.1333"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-              </svg>
-            </div>
+            <span>Graphic Design</span>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M1 7.4012H13.1333"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
           </a>
           <a class="service" href="#seo">
             <div class="progressive">
               <img
-                src="assets/service-4.webp"
+                src="./assets/images/service-4.webp"
                 alt="SEO for Business"
                 loading="lazy"
               />
             </div>
-            <div class="service-text">
-              <span>SEO for Business</span>
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-                <path
-                  d="M1 7.4012H13.1333"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="bevel"
-                />
-              </svg>
-            </div>
+            <span>SEO for Business</span>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.93359 2L14.0003 7.63333L7.93359 13.2667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M1 7.4012H13.1333"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"
+              />
+            </svg>
           </a>
         </div>
       </section>
       <section id="perks">
-        <div class="section-heading">
-          <h2>Why you should choose us?</h2>
-          <p>With lots of unique blocks, you can easily build a page without
-            coding. Build your next landing page.</p>
-        </div>
-        <div class="demo">
-          <div class="video">
+        <h2>Why you should choose us?</h2>
+        <p>
+          With lots of unique blocks, you can easily build a page without
+          coding. Build your next landing page.
+        </p>
+        <div class="perks__demo container">
+          <div class="video-container">
             <video
-              id="video"
-              poster="assets/content-thumbnail.webp"
+              id="demo_video"
+              poster="assets/images/content-thumbnail.webp"
               preload="none"
             >
-              <source src="assets/cat.mp4" type="video/mp4" />
+              <source src="assets/videos/cat.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div id="play-btn"></div>
+            <button
+              id="play-button"
+              type="button"
+              aria-label="play"
+              title="play demo"
+            >
+              <svg
+                width="12"
+                height="14"
+                viewBox="0 0 12 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.844 6.72319L0.459681 0.0415339C0.36441 -0.0144414 0.24754 -0.0137985 0.152851 0.043222C0.0581608 0.100242 -5.89262e-05 0.205035 4.47564e-08 0.318345V13.6817C-5.89262e-05 13.795 0.0581608 13.8998 0.152851 13.9568C0.24754 14.0138 0.36441 14.0144 0.459681 13.9585L11.844 7.27681C11.9404 7.22032 12 7.11458 12 7C12 6.88542 11.9404 6.77968 11.844 6.72319Z"
+                  fill="#68D585"
+                />
+              </svg>
+            </button>
           </div>
-          <ol>
+          <ol class="list--perks">
             <li>
-              <div>
-                <h2>Easy Booking</h2>
-                <p>With lots of unique blocks, you can easily build a page
-                  without coding.</p>
-              </div>
+              <span>Easy Booking</span>
+              <p>
+                With lots of unique blocks, you can easily build a page without
+                coding.
+              </p>
             </li>
             <li>
-              <div>
-                <h2>Free Expert Opinion</h2>
-                <p>With lots of unique blocks, you can easily build a page
-                  without coding.</p>
-              </div>
+              <span>Free Expert Opinion</span>
+              <p>
+                With lots of unique blocks, you can easily build a page without
+                coding.
+              </p>
             </li>
             <li>
-              <div>
-                <h2>Get Your Results</h2>
-                <p>With lots of unique blocks, you can easily build a page
-                  without coding.</p>
-              </div>
+              <span>Get Your Results</span>
+              <p>
+                With lots of unique blocks, you can easily build a page without
+                coding.
+              </p>
             </li>
           </ol>
         </div>
       </section>
       <section id="alert">
         <span>new</span>
-        <span>
-          We've added a new exciting feature in v3.0.
-          <a href="pages/form">Get it now for $49.</a>
-        </span>
+        <span> We've added a new exciting feature in v3.0. </span>
+        <a href="pages/form">Get it now for $49.</a>
       </section>
-      <section id="testimonial">
-        <img src="assets/amazon.webp" alt="Amazon Logo" draggable="false" />
-        <img src="assets/google.webp" alt="Google Logo" draggable="false" />
-        <img src="assets/amazon.webp" alt="Amazon Logo" draggable="false" />
-        <blockquote>
-          <p>You made it so simple. My new site is so much faster & easier to
-            work with Albino.</p>
-        </blockquote>
-        <blockquote>
-          <p>Must have book for students, who want to be a great Product
-            Designer.</p>
-        </blockquote>
-        <blockquote>
-          <p>You made it so simple. My new site is so much faster & easier to
-            work with Albino.</p>
-        </blockquote>
-        <div class="avatar">
-          <img
-            src="assets/testimony-1.webp"
-            alt="First Testimony"
-            draggable="false"
-          />
-          <div>
-            <h2>Ilya Vasin</h2>
-            <span>Software Engineer</span>
+      <section id="testimonies">
+        <div class="container">
+          <div class="testimony">
+            <img
+              src="assets/images/amazon.webp"
+              alt="Amazon Logo"
+              draggable="false"
+            />
+            <blockquote>
+              <p>
+                You made it so simple. My new site is so much faster & easier to
+                work with Albino.
+              </p>
+            </blockquote>
+            <div class="testimony__avatar">
+              <img
+                src="assets/images/testimony-1.webp"
+                alt="First Testimony"
+                draggable="false"
+              />
+              <div>
+                <span>Ilya Vasin</span>
+                <span>Software Engineer</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="avatar">
-          <img
-            src="assets/testimony-2.webp"
-            alt="Second Testimony"
-            draggable="false"
-          />
-          <div>
-            <h2>Mariano Rasgado</h2>
-            <span>Software Engineer</span>
+          <div class="testimony">
+            <img
+              src="assets/images/google.webp"
+              alt="Google Logo"
+              draggable="false"
+            />
+            <blockquote>
+              <p>
+                Must have book for students, who want to be a great Product
+                Designer.
+              </p>
+            </blockquote>
+            <div class="testimony__avatar">
+              <img
+                src="assets/images/testimony-2.webp"
+                alt="Second Testimony"
+                draggable="false"
+              />
+              <div>
+                <span>Mariano Rasgado</span>
+                <span>Software Engineer</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="avatar">
-          <img
-            src="assets/testimony-3.webp"
-            alt="Third Testimony"
-            draggable="false"
-          />
-          <div>
-            <h2>Oka Tomoaki</h2>
-            <span>Software Engineer</span>
+          <div class="testimony">
+            <img
+              src="assets/images/amazon.webp"
+              alt="Amazon Logo"
+              draggable="false"
+            />
+            <blockquote>
+              <p>
+                You made it so simple. My new site is so much faster & easier to
+                work with Albino.
+              </p>
+            </blockquote>
+            <div class="testimony__avatar">
+              <img
+                src="assets/images/testimony-3.webp"
+                alt="Third Testimony"
+                draggable="false"
+              />
+              <div>
+                <span>Oka Tomoaki</span>
+                <span>Software Engineer</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer id="footer">
-      <div class="footer">
-        <span class="grid-head">Company</span>
-        <span class="grid-head">Product</span>
-        <span class="grid-head">Services</span>
-        <span class="grid-head">Legal</span>
-        <span class="grid-head">Contact us</span>
-        <a href="#">About us</a>
-        <a href="#">Features</a>
-        <a href="#">Digital Marketing</a>
-        <a href="#">Privacy Policy</a>
-        <a href="mailto:support@brainwave.io" class="grid-link"
-          >support@brainwave.io</a
-        >
-        <a href="pages/form">Contact us</a>
-        <a href="#">Pricing</a>
-        <a href="#">Content Writing</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#" class="grid-link">+133-394-3439-1435</a>
-        <a href="#">Careers</a>
-        <a href="#">News</a>
-        <a href="#">SEO for Business</a>
-        <a href="#">Return Policy</a>
-        <span></span>
-        <a href="#">Press</a>
-        <a href="#">Help desk</a>
-        <a href="#">UI Design</a>
-        <span></span>
-        <span></span>
-        <span></span>
-        <a href="#">Support</a>
+    <footer id="footer" class="container">
+      <div class="footer__links">
+        <div class="footer__link-column">
+          <span>Company</span>
+          <a href="#">About us</a>
+          <a href="pages/form">Contact us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer__link-column">
+          <span>Product</span>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">News</a>
+          <a href="#">Help desk</a>
+          <a href="#">Support</a>
+        </div>
+        <div class="footer__link-column">
+          <span>Services</span>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Content Writing</a>
+          <a href="#">SEO for Business</a>
+          <a href="#">UI Design</a>
+        </div>
+        <div class="footer__link-column">
+          <span>Legal</span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Return Policy</a>
+        </div>
+        <div class="footer__link-column">
+          <span>Contact us</span>
+          <a href="mailto:support@brainwave.io">support@brainwave.io</a>
+          <a href="#">+133-394-3439-1435</a>
+        </div>
       </div>
-      <div class="end">
+
+      <div class="footer__end">
         <span
           >&COPY;2024 Copyright, All Right Reserved, Made by Seju_ui_ux with<img
-            src="assets/heart.svg"
+            src="assets/images/heart.svg"
             alt="Heart shape"
         /></span>
-        <div class="flex-space"></div>
-        <a href="https://twitter.com/xmat2000">
-          <svg
-            width="18"
-            height="15"
-            viewBox="0 0 18 15"
-            xmlns="http://www.w3.org/2000/svg"
-            id="logo-twitter"
-          >
-            <path
-              d="M18 1.73969C17.325 2.04897 16.6125 2.24227 15.8625 2.35825C16.6125 1.89433 17.2125 1.15979 17.475 0.270619C16.7625 0.695876 15.975 1.00515 15.1125 1.19845C14.4375 0.463918 13.4625 0 12.4125 0C10.3875 0 8.7375 1.70103 8.7375 3.78866C8.7375 4.09794 8.775 4.36856 8.85 4.63918C5.8125 4.48454 3.075 2.9768 1.2375 0.657216C0.9375 1.23711 0.75 1.85567 0.75 2.55155C0.75 3.86598 1.3875 5.02577 2.4 5.72165C1.8 5.68299 1.2375 5.52835 0.7125 5.25773V5.29639C0.7125 7.15206 1.9875 8.69845 3.675 9.04639C3.375 9.12371 3.0375 9.16237 2.7 9.16237C2.475 9.16237 2.2125 9.12371 1.9875 9.08505C2.475 10.5928 3.825 11.7139 5.4375 11.7139C4.1625 12.7191 2.5875 13.3376 0.8625 13.3376C0.5625 13.3376 0.2625 13.3376 0 13.299C1.65 14.3814 3.5625 15 5.6625 15C12.45 15 16.1625 9.20103 16.1625 4.17526C16.1625 4.02062 16.1625 3.82732 16.1625 3.67268C16.875 3.1701 17.5125 2.51289 18 1.73969Z"
-              fill="#161C2D"
-            />
-          </svg>
-        </a>
-        <a href="https://fb.com/mohamedhussein6a">
-          <svg
-            width="19"
-            height="19"
-            viewBox="0 0 19 19"
-            xmlns="http://www.w3.org/2000/svg"
-            id="logo-facebook"
-          >
-            <path
-              d="M18.2083 0H0.791667C0.354441 0 0 0.354441 0 0.791667V18.2083C0 18.6456 0.354441 19 0.791667 19H10.1485V11.6422H7.67244V8.77473H10.1485V6.66005C10.1485 4.20597 11.6474 2.86968 13.8366 2.86968C14.8852 2.86968 15.7865 2.94776 16.0491 2.98265V5.5473L14.5308 5.54799C13.3402 5.54799 13.1097 6.11375 13.1097 6.94397V8.77473H15.9492L15.5794 11.6422H13.1097V19H18.2083C18.6456 19 19 18.6456 19 18.2083V0.791667C19 0.354441 18.6456 0 18.2083 0Z"
-              fill="#161C2D"
-            />
-          </svg>
-        </a>
-        <a href="https://instagram.com">
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="19"
-            height="19"
-            viewBox="0 0 132.004 132"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            id="logo-instagram"
-          >
-            <defs>
-              <linearGradient id="b">
-                <stop offset="0" stop-color="#3771c8" />
-                <stop stop-color="#3771c8" offset=".128" />
-                <stop offset="1" stop-color="#60f" stop-opacity="0" />
-              </linearGradient>
-              <linearGradient id="a">
-                <stop offset="0" stop-color="#fd5" />
-                <stop offset=".1" stop-color="#fd5" />
-                <stop offset=".5" stop-color="#ff543e" />
-                <stop offset="1" stop-color="#c837ab" />
-              </linearGradient>
-              <radialGradient
-                id="c"
-                cx="158.429"
-                cy="578.088"
-                r="65"
-                xlink:href="#a"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)"
-                fx="158.429"
-                fy="578.088"
+        <div class="footer__social">
+          <a href="https://twitter.com/xmat2000" title="x">
+            <svg
+              width="18"
+              height="15"
+              viewBox="0 0 18 15"
+              xmlns="http://www.w3.org/2000/svg"
+              id="logo-twitter"
+            >
+              <path
+                d="M18 1.73969C17.325 2.04897 16.6125 2.24227 15.8625 2.35825C16.6125 1.89433 17.2125 1.15979 17.475 0.270619C16.7625 0.695876 15.975 1.00515 15.1125 1.19845C14.4375 0.463918 13.4625 0 12.4125 0C10.3875 0 8.7375 1.70103 8.7375 3.78866C8.7375 4.09794 8.775 4.36856 8.85 4.63918C5.8125 4.48454 3.075 2.9768 1.2375 0.657216C0.9375 1.23711 0.75 1.85567 0.75 2.55155C0.75 3.86598 1.3875 5.02577 2.4 5.72165C1.8 5.68299 1.2375 5.52835 0.7125 5.25773V5.29639C0.7125 7.15206 1.9875 8.69845 3.675 9.04639C3.375 9.12371 3.0375 9.16237 2.7 9.16237C2.475 9.16237 2.2125 9.12371 1.9875 9.08505C2.475 10.5928 3.825 11.7139 5.4375 11.7139C4.1625 12.7191 2.5875 13.3376 0.8625 13.3376C0.5625 13.3376 0.2625 13.3376 0 13.299C1.65 14.3814 3.5625 15 5.6625 15C12.45 15 16.1625 9.20103 16.1625 4.17526C16.1625 4.02062 16.1625 3.82732 16.1625 3.67268C16.875 3.1701 17.5125 2.51289 18 1.73969Z"
+                fill="#161C2D"
               />
-              <radialGradient
-                id="d"
-                cx="147.694"
-                cy="473.455"
-                r="65"
-                xlink:href="#b"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)"
-                fx="147.694"
-                fy="473.455"
+            </svg>
+          </a>
+          <a href="https://fb.com/mohamedhussein6a" title="facebook">
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              xmlns="http://www.w3.org/2000/svg"
+              id="logo-facebook"
+            >
+              <path
+                d="M18.2083 0H0.791667C0.354441 0 0 0.354441 0 0.791667V18.2083C0 18.6456 0.354441 19 0.791667 19H10.1485V11.6422H7.67244V8.77473H10.1485V6.66005C10.1485 4.20597 11.6474 2.86968 13.8366 2.86968C14.8852 2.86968 15.7865 2.94776 16.0491 2.98265V5.5473L14.5308 5.54799C13.3402 5.54799 13.1097 6.11375 13.1097 6.94397V8.77473H15.9492L15.5794 11.6422H13.1097V19H18.2083C18.6456 19 19 18.6456 19 18.2083V0.791667C19 0.354441 18.6456 0 18.2083 0Z"
+                fill="#161C2D"
               />
-            </defs>
-            <path
-              fill="url(#c)"
-              d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
-              transform="translate(1.004 1)"
-            />
-            <path
-              fill="url(#d)"
-              d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
-              transform="translate(1.004 1)"
-            />
-            <path
-              fill="#fff"
-              d="M66.004 18c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97c-3.18 0-5.76 2.577-5.76 5.758 0 3.18 2.58 5.76 5.76 5.76 3.18 0 5.76-2.58 5.76-5.76 0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C79.617 90.645 90.65 79.613 90.65 66S79.616 41.35 66.003 41.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z"
-            />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/mhdeeb">
-          <svg
-            width="19"
-            height="19"
-            viewBox="0 0 19 19"
-            xmlns="http://www.w3.org/2000/svg"
-            id="logo-linkedin"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M0.791667 0H18.2083C18.6438 0 19 0.35625 19 0.791667V18.2083C19 18.6438 18.6438 19 18.2083 19H0.791667C0.35625 19 0 18.6438 0 18.2083V0.791667C0 0.35625 0.35625 0 0.791667 0ZM2.81042 16.1896H5.62083V7.125H2.81042V16.1896ZM4.23542 5.89792C3.325 5.89792 2.6125 5.18542 2.6125 4.275C2.6125 3.36458 3.325 2.65208 4.23542 2.65208C5.14583 2.65208 5.85833 3.36458 5.85833 4.275C5.85833 5.14583 5.14583 5.89792 4.23542 5.89792ZM13.3792 16.1896H16.15V11.2021C16.15 8.74792 15.6354 6.8875 12.7854 6.8875C11.4396 6.8875 10.4896 7.63958 10.1333 8.35208H10.0938V7.125H7.40208V16.1896H10.2125V11.7167C10.2125 10.5292 10.45 9.38125 11.9146 9.38125C13.3792 9.38125 13.3792 10.7271 13.3792 11.7958V16.1896Z"
-              fill="#161C2D"
-            />
-          </svg>
-        </a>
+            </svg>
+          </a>
+          <a href="https://instagram.com" title="instagram">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 132.004 132"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              id="logo-instagram"
+            >
+              <defs>
+                <linearGradient id="b">
+                  <stop offset="0" stop-color="#3771c8" />
+                  <stop stop-color="#3771c8" offset=".128" />
+                  <stop offset="1" stop-color="#60f" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="a">
+                  <stop offset="0" stop-color="#fd5" />
+                  <stop offset=".1" stop-color="#fd5" />
+                  <stop offset=".5" stop-color="#ff543e" />
+                  <stop offset="1" stop-color="#c837ab" />
+                </linearGradient>
+                <radialGradient
+                  id="c"
+                  cx="158.429"
+                  cy="578.088"
+                  r="65"
+                  xlink:href="#a"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)"
+                  fx="158.429"
+                  fy="578.088"
+                />
+                <radialGradient
+                  id="d"
+                  cx="147.694"
+                  cy="473.455"
+                  r="65"
+                  xlink:href="#b"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)"
+                  fx="147.694"
+                  fy="473.455"
+                />
+              </defs>
+              <path
+                fill="url(#c)"
+                d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
+                transform="translate(1.004 1)"
+              />
+              <path
+                fill="url(#d)"
+                d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
+                transform="translate(1.004 1)"
+              />
+              <path
+                fill="#fff"
+                d="M66.004 18c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97c-3.18 0-5.76 2.577-5.76 5.758 0 3.18 2.58 5.76 5.76 5.76 3.18 0 5.76-2.58 5.76-5.76 0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C79.617 90.645 90.65 79.613 90.65 66S79.616 41.35 66.003 41.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mhdeeb" title="linkedin">
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              xmlns="http://www.w3.org/2000/svg"
+              id="logo-linkedin"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.791667 0H18.2083C18.6438 0 19 0.35625 19 0.791667V18.2083C19 18.6438 18.6438 19 18.2083 19H0.791667C0.35625 19 0 18.6438 0 18.2083V0.791667C0 0.35625 0.35625 0 0.791667 0ZM2.81042 16.1896H5.62083V7.125H2.81042V16.1896ZM4.23542 5.89792C3.325 5.89792 2.6125 5.18542 2.6125 4.275C2.6125 3.36458 3.325 2.65208 4.23542 2.65208C5.14583 2.65208 5.85833 3.36458 5.85833 4.275C5.85833 5.14583 5.14583 5.89792 4.23542 5.89792ZM13.3792 16.1896H16.15V11.2021C16.15 8.74792 15.6354 6.8875 12.7854 6.8875C11.4396 6.8875 10.4896 7.63958 10.1333 8.35208H10.0938V7.125H7.40208V16.1896H10.2125V11.7167C10.2125 10.5292 10.45 9.38125 11.9146 9.38125C13.3792 9.38125 13.3792 10.7271 13.3792 11.7958V16.1896Z"
+                fill="#161C2D"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
