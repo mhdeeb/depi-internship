@@ -104,8 +104,7 @@ section#facts > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-block-start: 8rem;
-  padding-block-end: 7.5rem;
+  padding-block: 8rem 7.5rem;
 }
 
 .fact {
