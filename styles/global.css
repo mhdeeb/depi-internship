@@ -1,0 +1,121 @@
+@import url("./colors.css");
+@import url("./animations.css");
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Gilroy", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 111rem;
+}
+
+.progressive {
+  filter: blur(20px);
+}
+
+.progressive > img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.progressive.progressive--loaded {
+  filter: blur(0);
+  & > img {
+    opacity: 1;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.background-container {
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 100ms, background-color 100ms;
+  animation: appear 0.5s;
+}
+
+.btn:hover {
+  background-color: hsl(from var(--secondary-color) h s calc(l + 2));
+  box-shadow: 0px 0px 20px var(--shadow-color);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: hsl(from var(--secondary-color) h s calc(l - 2));
+  transform: scale(1);
+}
+
+.btn--arr::after {
+  content: url("../assets/images/tail-right.svg");
+  margin-inline-start: 4rem;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}

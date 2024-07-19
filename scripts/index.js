@@ -1,39 +1,49 @@
 console.log("JavaScript loaded successfully!");
 
-function getStartedButton() {
-  window.location.href = "pages/form";
+function progressiveLoad() {
+  const progressiveImages = document.querySelectorAll(".progressive");
+
+  progressiveImages.forEach((progressiveBlock) => {
+    function load() {
+      progressiveBlock.classList.add("progressive--loaded");
+    }
+
+    const progressiveImage = progressiveBlock.querySelector("img");
+
+    if (!progressiveImage) return;
+
+    if (progressiveImage.complete) load();
+    else progressiveImage.addEventListener("load", load);
+  });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const progressiveImages = document.querySelectorAll(".progressive");
-  progressiveImages.forEach((progressiveDev) => {
-    const progressiveImage = progressiveDev.querySelector("img");
-    if (progressiveImage.complete) {
-      progressiveDev.classList.add("loaded");
-      progressiveDev.style.filter = "blur(0)";
-    } else
-      progressiveImage.addEventListener("load", () => {
-        progressiveDev.classList.add("loaded");
-        progressiveDev.style.filter = "blur(0)";
-      });
-  });
+function prepareDemoVideo() {
+  let playButton = document.getElementById("play-button");
+  let video = document.getElementById("demo_video");
 
-  let playButton = document.getElementById("play-btn");
-  let video = document.getElementById("video");
+  if (!(playButton && video)) return;
+
   playButton.addEventListener("click", () => {
     if (video.paused) {
       video.play();
       video.controls = true;
-      playButton.style.display = "none";
+      playButton.style.visibility = "hidden";
     } else {
       video.pause();
     }
   });
+
   video.addEventListener("ended", () => {
-    playButton.style.display = "flex";
+    playButton.style.visibility = "visible";
     video.controls = false;
     document.exitFullscreen();
   });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  progressiveLoad();
+
+  prepareDemoVideo();
 });
 
 const debounce = (fn) => {
