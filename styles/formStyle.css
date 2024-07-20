@@ -6,11 +6,38 @@ body {
   color: var(--text-color);
 }
 
-header {
+header > a {
+  display: flex;
+  gap: 1.5rem;
   position: fixed;
   top: 5rem;
-  left: 5rem;
   z-index: 1;
+  background-color: #161c2d55;
+  border: 1px solid var(--shadow-color);
+  border-left: none;
+  padding-block: 2.5rem;
+  padding-inline: 3rem;
+  border-radius: 0 100px 100px 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transform: translateX(-75%);
+  transition: background-color 250ms, transform 250ms;
+  cursor: pointer;
+  align-items: center;
+}
+
+header svg {
+  transition: fill 250ms;
+  fill: #161c2d55;
+}
+
+header:hover > a {
+  background-color: #161c2d;
+  transform: translateX(0);
+}
+
+header:hover svg {
+  fill: var(--border-color);
 }
 
 section#form > .container {
