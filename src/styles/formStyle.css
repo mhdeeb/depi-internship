@@ -88,14 +88,14 @@ section#form > .container {
 section#cta {
   background-color: var(--bg-color);
   padding-block: 7.7rem;
-  opacity: 0;
-  animation: appear 1s ease-out 1s forwards, from-bottom 1s ease-out 1s forwards;
 }
 
 section#cta > div {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  opacity: 0;
+  animation: appear 1s ease-out 1s forwards, from-bottom 1s ease-out 1s forwards;
 
   & span {
     display: inline-block;
