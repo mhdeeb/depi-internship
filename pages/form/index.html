@@ -9,28 +9,96 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Mohamed El-Deeb" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../assets/Chat.svg" />
+    <link rel="icon" href="../../assets/images/Chat.svg" />
     <link rel="stylesheet" href="../../styles/formStyle.css" />
     <script src="../../scripts/form.js"></script>
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
     <title>Consultation Subscription</title>
   </head>
   <body>
-    <header><a href="/depi-internship">Home</a></header>
+    <header>
+      <a href="/depi-internship"
+        ><img src="../../assets/images/logo.svg" alt="Company Logo"
+      /></a>
+    </header>
     <main>
-      <section id="form"></section>
+      <section id="form" class="background-container">
+        <div class="background bg--form"></div>
+        <div class="container">
+          <div class="form__text">
+            <img src="../../assets/images/Chat.svg" alt="Chat Icon" />
+            <h2>Get a free consultancy from our expert right now!</h2>
+            <p>
+              With lots of unique blocks, you can easily build a page without
+              coding. Build your next landing page so quickly with Albino.
+            </p>
+          </div>
+          <form class="form__content" onsubmit="return submitForm(this);">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="form__name"
+              placeholder="i.e. John Doe"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="form__email"
+              placeholder="i.e. john@mail.com"
+              required
+            />
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              id="form__phone"
+              placeholder="i.e. 123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
+            <label for="service">Which service do you need?</label>
+            <select
+              name="service"
+              id="form__service"
+              title="Service Selector"
+              required
+            >
+              <option value="" selected disabled hidden>
+                Select a service
+              </option>
+              <option value="consultation">Consultation</option>
+              <option value="design">Design</option>
+              <option value="development">Development</option>
+              <option value="marketing">Marketing</option>
+            </select>
+            <button type="submit" class="btn">Get Free Consultancy</button>
+          </form>
+        </div>
+      </section>
+      <section id="cta">
+        <div class="container">
+          <span
+            >Subscribe to our newsletter to get latest news on your inbox.</span
+          >
+          <form
+            class="sub-form"
+            method="post"
+            onsubmit="return submitSubscribeForm(this);"
+          >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+            />
+            <button type="submit" class="btn btn--arr">Subscribe</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>
-      <h2>Subscribe to our newsletter to get latest news on your inbox.</h2>
-      <form action="#" method="post">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email"
-        />
-        <button type="submit" class="btn-arr">Subscribe</button>
-      </form>
-    </footer>
   </body>
 </html>

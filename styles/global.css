@@ -91,6 +91,7 @@ button {
   border-radius: 8px;
   font-size: 1.7rem;
   font-weight: bold;
+  letter-spacing: -0.6px;
   cursor: pointer;
   transition: transform 100ms, background-color 100ms;
   animation: appear 0.5s;
