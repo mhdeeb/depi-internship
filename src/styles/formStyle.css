@@ -1,43 +1,4 @@
-@font-face {
-  font-family: "Rubik";
-  src: url("../../fonts/Rubik-VariableFont_wght.woff2")
-    format("woff2-variations");
-  font-weight: 300 900;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-Regular.woff2") format("woff2");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../../fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: bold;
-}
-
-:root {
-  --bg-color: #ffffff;
-  --bg-perks: #f4f7fa;
-  --border-color: #e7e9ed;
-  --bg-video: #7d818d;
-  --text-color: #161c2d;
-  --secondary-color: #473bf0;
-  --accent-color: #68d585;
-  --shadow-color: #00000055;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
+@import url("./global.css");
 
 body {
   font-family: "Gilroy", sans-serif;
@@ -45,57 +6,114 @@ body {
   color: var(--text-color);
 }
 
-section#form {
-  height: 745px;
-  background-image: url("../../assets/bg-form.webp");
-  opacity: 14%;
-  background-position: center;
-  background-size: cover;
+header {
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+  z-index: 1;
 }
 
-footer {
-  background-color: var(--bg-color);
-  height: 242px;
+section#form > .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12.2rem;
+  justify-content: space-between;
+  padding-block: 12.3rem;
 }
 
-footer h2 {
-  font-size: 3.2rem;
-  text-wrap: wrap;
-  width: 50.8rem;
+.bg--form {
+  background-image: url("../assets/images/bg-form.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.14;
 }
 
-.btn,
-.btn-arr {
-  background-color: var(--secondary-color);
+.form__text {
   color: var(--bg-color);
+  max-width: 43rem;
+
+  > img {
+    opacity: 0;
+    animation: from-left 1s ease-out forwards, appear 1s ease-out forwards;
+  }
+
+  > h2 {
+    padding-block: 4.6rem 1.8rem;
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 4.8rem;
+    opacity: 0;
+    animation: from-top 1s ease-out forwards, appear 1s ease-out forwards;
+  }
+
+  > p {
+    font-size: 1.9rem;
+    line-height: 3.2rem;
+    opacity: 0;
+    animation: from-left 1s ease-out 0.5s forwards,
+      appear-partial 1s ease-out 0.5s forwards;
+  }
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 2.8rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  width: 35rem;
+  margin-inline-start: auto;
+  animation: appear 1s ease-out, from-right 1s ease-out;
+
+  & label {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  & input {
+    padding: 2rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1.5rem;
+  }
+
+  & select {
+    padding: 1.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
+}
+
+section#cta {
+  background-color: var(--bg-color);
+  padding-block: 7.7rem;
+  opacity: 0;
+  animation: appear 1s ease-out 1s forwards, from-bottom 1s ease-out 1s forwards;
+}
+
+section#cta > div {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  & span {
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-wrap: wrap;
+    max-width: 50.8rem;
+  }
+}
+
+.sub-form {
+  padding-block: 1.4rem;
+}
+
+.sub-form > input {
+  height: 100%;
   padding: 2rem;
   border-radius: 8px;
-  font-size: 1.7rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.1s, background-color 0.1s;
-  animation: appear 0.5s;
-}
-
-.btn:hover,
-.btn-arr:hover {
-  background-color: hsl(from var(--secondary-color) h s calc(l + 2));
-  box-shadow: 0px 0px 20px var(--shadow-color);
-  transform: scale(1.05);
-}
-
-.btn:active,
-.btn-arr:active {
-  background-color: hsl(from var(--secondary-color) h s calc(l - 2));
-  transform: scale(1);
-}
-
-.btn-arr::after {
-  content: url("../../assets/tail-right.svg");
-  margin-inline-start: 4rem;
+  border: 1px solid var(--border-color);
+  margin-inline-end: 2rem;
 }
