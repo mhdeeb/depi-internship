@@ -8,19 +8,18 @@ body {
 
 header > a {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   position: fixed;
-  top: 5rem;
+  top: 10rem;
   z-index: 1;
-  background-color: #161c2d55;
-  border: 1px solid var(--shadow-color);
+  background-color: #161c2d44;
+  border: 3px solid var(--shadow-color);
   border-left: none;
-  padding-block: 2.5rem;
-  padding-inline: 3rem;
+  padding: 1.5rem;
   border-radius: 0 100px 100px 0;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  transform: translateX(-75%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transform: translateX(-77%);
   transition: background-color 250ms, transform 250ms;
   cursor: pointer;
   align-items: center;
@@ -28,16 +27,16 @@ header > a {
 
 header svg {
   transition: fill 250ms;
-  fill: #161c2d55;
+  fill: #657cb955;
 }
 
 header:hover > a {
-  background-color: #161c2d;
+  background-color: rgb(from var(--shadow-color) r g b / 0.5);
   transform: translateX(0);
 }
 
 header:hover svg {
-  fill: var(--border-color);
+  fill: var(--accent-color);
 }
 
 section#form > .container {
@@ -122,7 +121,8 @@ section#cta > div {
   justify-content: space-between;
   align-content: center;
   opacity: 0;
-  animation: appear 1s ease-out 1s forwards, from-bottom 1s ease-out 1s forwards;
+  animation: appear 1s ease-out 800ms forwards,
+    from-bottom 1s ease-out 800ms forwards;
 
   & span {
     display: inline-block;

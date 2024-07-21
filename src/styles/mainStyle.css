@@ -106,14 +106,13 @@ nav a:hover {
 }
 
 section#facts {
-  border-bottom: 1px solid var(--border-color);
-}
-
-section#facts > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-block: 8rem 7.5rem;
+  opacity: 0;
+  animation: appear 1s ease-out 800ms forwards,
+    from-bottom 1s ease-out 800ms forwards;
 }
 
 .fact {
@@ -307,10 +306,6 @@ section#alert a:hover {
 }
 
 section#testimonies {
-  border-bottom: 1px solid var(--border-color);
-}
-
-section#testimonies > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
