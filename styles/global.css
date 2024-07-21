@@ -47,6 +47,11 @@ button {
   cursor: pointer;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
 .container {
   margin-inline: auto;
   max-width: 111rem;
