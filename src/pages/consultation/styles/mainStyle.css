@@ -52,8 +52,8 @@ header::before {
   animation: appear 1s ease-out forwards;
 }
 
-html:not([data-scroll="0"]) {
-  .nav-bar {
+html {
+  &:not([data-scroll="0"]) .nav-bar {
     background-color: #161c2d55;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);

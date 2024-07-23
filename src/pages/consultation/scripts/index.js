@@ -1,20 +1,3 @@
-function progressiveLoad() {
-  const progressiveImages = document.querySelectorAll(".progressive");
-
-  progressiveImages.forEach((progressiveBlock) => {
-    function load() {
-      progressiveBlock.classList.add("progressive--loaded");
-    }
-
-    const progressiveImage = progressiveBlock.querySelector("img");
-
-    if (!progressiveImage) return;
-
-    if (progressiveImage.complete) load();
-    else progressiveImage.addEventListener("load", load);
-  });
-}
-
 function prepareDemoVideo() {
   let playButton = document.getElementById("play-button");
   let video = document.getElementById("demo_video");
@@ -39,27 +22,5 @@ function prepareDemoVideo() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  progressiveLoad();
-
   prepareDemoVideo();
 });
-
-const debounce = (fn) => {
-  let frame;
-  return (...params) => {
-    if (frame) {
-      cancelAnimationFrame(frame);
-    }
-    frame = requestAnimationFrame(() => {
-      fn(...params);
-    });
-  };
-};
-
-const storeScroll = () => {
-  document.documentElement.dataset.scroll = window.scrollY;
-};
-
-document.addEventListener("scroll", debounce(storeScroll), { passive: true });
-
-storeScroll();
