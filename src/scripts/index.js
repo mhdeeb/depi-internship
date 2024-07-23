@@ -22,14 +22,6 @@ const storeScroll = () => {
   document.documentElement.dataset.scroll = window.scrollY / totalHeight;
 };
 
-document.addEventListener("scroll", debounce(storeScroll), { passive: true });
-
-document.addEventListener("DOMContentLoaded", () => {
-  progressiveLoad();
-
-  storeScroll();
-});
-
 const debounce = (fn) => {
   let frame;
   return (...params) => {
@@ -41,3 +33,11 @@ const debounce = (fn) => {
     });
   };
 };
+
+document.addEventListener("scroll", debounce(storeScroll), { passive: true });
+
+document.addEventListener("DOMContentLoaded", () => {
+  progressiveLoad();
+
+  storeScroll();
+});
