@@ -1,5 +1,3 @@
-console.log("JavaScript loaded successfully!");
-
 function progressiveLoad() {
   const progressiveImages = document.querySelectorAll(".progressive");
 
@@ -17,33 +15,8 @@ function progressiveLoad() {
   });
 }
 
-function prepareDemoVideo() {
-  let playButton = document.getElementById("play-button");
-  let video = document.getElementById("demo_video");
-
-  if (!(playButton && video)) return;
-
-  playButton.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      video.controls = true;
-      playButton.style.visibility = "hidden";
-    } else {
-      video.pause();
-    }
-  });
-
-  video.addEventListener("ended", () => {
-    playButton.style.visibility = "visible";
-    video.controls = false;
-    document.exitFullscreen();
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   progressiveLoad();
-
-  prepareDemoVideo();
 });
 
 const debounce = (fn) => {
@@ -59,7 +32,10 @@ const debounce = (fn) => {
 };
 
 const storeScroll = () => {
-  document.documentElement.dataset.scroll = window.scrollY;
+  const totalHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  document.documentElement.dataset.scroll = window.scrollY / totalHeight;
 };
 
 document.addEventListener("scroll", debounce(storeScroll), { passive: true });
