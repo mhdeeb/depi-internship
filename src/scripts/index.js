@@ -15,8 +15,19 @@ function progressiveLoad() {
   });
 }
 
+const storeScroll = () => {
+  const totalHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  document.documentElement.dataset.scroll = window.scrollY / totalHeight;
+};
+
+document.addEventListener("scroll", debounce(storeScroll), { passive: true });
+
 document.addEventListener("DOMContentLoaded", () => {
   progressiveLoad();
+
+  storeScroll();
 });
 
 const debounce = (fn) => {
@@ -30,14 +41,3 @@ const debounce = (fn) => {
     });
   };
 };
-
-const storeScroll = () => {
-  const totalHeight =
-    document.documentElement.scrollHeight - window.innerHeight;
-
-  document.documentElement.dataset.scroll = window.scrollY / totalHeight;
-};
-
-document.addEventListener("scroll", debounce(storeScroll), { passive: true });
-
-storeScroll();
