@@ -23,7 +23,7 @@ header:before {
   padding-block: 1.7rem;
   padding-inline: 17rem;
   width: 100%;
-  z-index: 1;
+  z-index: 9999;
   transition: background-color 0.25s;
   opacity: 0;
   animation: appear 1s ease-out forwards;
@@ -138,5 +138,85 @@ nav {
 
     animation: from-right 1s ease-out 500ms forwards,
       appear 1s ease-out 500ms forwards;
+  }
+}
+
+section#services {
+  text-align: center;
+  margin-block-start: 11.7rem;
+
+  & > span {
+    font-size: 1.3rem;
+    color: #f64b4b;
+  }
+
+  & > h2 {
+    margin-block-start: 2.3rem;
+    font-size: 3.6rem;
+    font-weight: bold;
+    max-width: 56rem;
+    margin-inline: auto;
+  }
+}
+
+.services__cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-block-start: 8rem;
+}
+
+.service {
+  display: inline-block;
+  border-radius: 1rem;
+  max-width: 35rem;
+  padding-block: 3rem;
+  padding-inline: 2.8rem;
+  transition: transform 150ms, box-shadow 150ms;
+  color: white;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px var(--shadow-color);
+  }
+
+  & img {
+    width: 11.8rem;
+    height: 13.3rem;
+    margin-inline: auto;
+    margin-block-start: 3rem;
+  }
+
+  & h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-block-start: 4rem;
+  }
+
+  & p {
+    font-size: 1.7rem;
+    margin-block-start: 1.5rem;
+    line-height: 2.9rem;
+    opacity: 0.65;
+  }
+
+  & span {
+    display: block;
+    margin-block-start: 4.3rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  &:first-child {
+    background: #68d585;
+  }
+
+  &:nth-child(2) {
+    background: #473bf0;
+  }
+
+  &:last-child {
+    background: #f64b4b;
   }
 }
