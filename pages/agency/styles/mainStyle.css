@@ -18,7 +18,9 @@ header:before {
 .nav-bar {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
   align-items: center;
+  justify-content: space-around;
   position: fixed;
   padding-block: 1.7rem;
   padding-inline: 17rem;
@@ -47,6 +49,8 @@ header:before {
 }
 
 nav {
+  display: flex;
+  justify-content: space-around;
   & a {
     color: var(--text-color);
     transition: text-shadow 250ms, color 250ms;
@@ -60,7 +64,7 @@ nav {
 
 .head {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -234,5 +238,42 @@ section#services::after {
 
   &:last-child {
     background: #f64b4b;
+  }
+}
+
+section#first-testimony {
+  margin-block-start: 11rem;
+  padding-block-end: 12rem;
+  border-bottom: 1px solid var(--border-color);
+  /* Issue */
+  display: flex;
+  gap: 4rem;
+
+  & > img {
+    width: 16.4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  & > div {
+    & blockquote {
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+      font-weight: bold;
+      margin-block: 2.5rem;
+    }
+
+    & span {
+      display: inline-block;
+      margin-block-start: auto;
+      font-size: 1.7rem;
+
+      &:first-of-type {
+        font-weight: bold;
+      }
+
+      &:last-of-type {
+      }
+    }
   }
 }
