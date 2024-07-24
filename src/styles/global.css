@@ -32,14 +32,25 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 90px;
 
-  &[data-scroll="0"] {
+  &:not([data-scroll="0"]):not([data-scroll="NaN"]) {
+    & .nav-bar {
+      background-color: #161c2d55;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 0px 20px var(--shadow-color);
+    }
+  }
+
+  &[data-scroll="0"],
+  &[data-scroll="NaN"] {
     .side-nav > a:first-child {
       opacity: 0;
       pointer-events: none;
     }
   }
 
-  &[data-scroll="1"] {
+  &[data-scroll="1"],
+  &[data-scroll="NaN"] {
     .side-nav > a:last-child {
       opacity: 0;
       pointer-events: none;

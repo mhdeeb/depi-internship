@@ -18,8 +18,11 @@ function progressiveLoad() {
 const storeScroll = () => {
   const totalHeight =
     document.documentElement.scrollHeight - window.innerHeight;
+  let scroll = window.scrollY / totalHeight;
 
-  document.documentElement.dataset.scroll = window.scrollY / totalHeight;
+  scroll = Math.min(Math.max(scroll, 0), 1);
+
+  document.documentElement.dataset.scroll = scroll;
 };
 
 const debounce = (fn) => {

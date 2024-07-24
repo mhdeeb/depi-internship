@@ -1,1 +1,142 @@
 @import url("../../../styles/global.css");
+
+body {
+  background-color: var(--bg-perks);
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../assets/images/header-bg.webp");
+  background-size: cover;
+  opacity: 0.0156;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  padding-block: 1.7rem;
+  padding-inline: 17rem;
+  width: 100%;
+  z-index: 1;
+  transition: background-color 0.25s;
+  opacity: 0;
+  animation: appear 1s ease-out forwards;
+
+  & img {
+    filter: brightness(0%);
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-inline-start: 1.7rem;
+  }
+
+  & > :last-child {
+    margin-inline-start: auto;
+  }
+}
+
+nav {
+  & a {
+    color: var(--text-color);
+    transition: text-shadow 250ms, color 250ms;
+
+    &:hover {
+      color: hsl(from var(--secondary-color) h s calc(l + 5));
+      text-shadow: 0px 0px 10px var(--shadow-color);
+    }
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.head__text {
+  padding-block: 18.5rem 14rem;
+  max-width: 60rem;
+
+  & span {
+    margin-inline-start: 1rem;
+    color: #f64b4b;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.163rem;
+
+    animation: appear 1s ease-out forwards;
+  }
+
+  & h1 {
+    padding-block-start: 2rem;
+    font-size: 6rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: from-top 1s ease-out forwards, appear 1s ease-out forwards;
+  }
+
+  & p {
+    font-size: 1.9rem;
+    margin-block: 3rem;
+    line-height: 3.2rem;
+    max-width: 52rem;
+    opacity: 0;
+    animation: from-left 1s ease-out 0.5s forwards,
+      appear-partial 1s ease-out 0.5s forwards;
+  }
+}
+
+.head__image {
+  position: relative;
+
+  & > :first-child {
+    border-radius: 50%;
+
+    animation: from-right 1s ease-out forwards;
+  }
+
+  & > :not(:first-child) {
+    position: absolute;
+
+    opacity: 0;
+  }
+
+  & > :nth-child(2) {
+    top: -4rem;
+    left: 9.5rem;
+    z-index: -1;
+
+    animation: from-right 1s ease-out 500ms forwards,
+      appear 1s ease-out 500ms forwards;
+  }
+
+  & > :nth-child(3) {
+    bottom: 3rem;
+    left: 0;
+    z-index: 1;
+
+    animation: from-right 1s ease-out 500ms forwards,
+      appear 1s ease-out 500ms forwards;
+  }
+
+  & > :last-child {
+    bottom: 5.5rem;
+    right: 2.5rem;
+    z-index: 1;
+
+    animation: from-right 1s ease-out 500ms forwards,
+      appear 1s ease-out 500ms forwards;
+  }
+}
