@@ -148,6 +148,9 @@ section#services {
   & > span {
     font-size: 1.3rem;
     color: #f64b4b;
+    letter-spacing: 0.163rem;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   & > h2 {
