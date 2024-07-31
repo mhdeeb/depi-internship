@@ -21,6 +21,4 @@ function prepareDemoVideo() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  prepareDemoVideo();
-});
+prepareDemoVideo();

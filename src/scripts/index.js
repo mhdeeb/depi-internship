@@ -15,12 +15,23 @@ function progressiveLoad() {
   });
 }
 
+function clamp(val, min, max) {
+  return Math.min(Math.max(val, min), max);
+}
+
+function round(val, digits) {
+  let place = 10 ** digits;
+  return Math.round(val * place) / place;
+}
+
 const storeScroll = () => {
   const totalHeight =
     document.documentElement.scrollHeight - window.innerHeight;
   let scroll = window.scrollY / totalHeight;
 
-  scroll = Math.min(Math.max(scroll, 0), 1);
+  scroll = clamp(scroll, 0, 1);
+
+  scroll = round(scroll, 2);
 
   document.documentElement.dataset.scroll = scroll;
 };
@@ -39,8 +50,6 @@ const debounce = (fn) => {
 
 document.addEventListener("scroll", debounce(storeScroll), { passive: true });
 
-document.addEventListener("DOMContentLoaded", () => {
-  progressiveLoad();
+progressiveLoad();
 
-  storeScroll();
-});
+storeScroll();
