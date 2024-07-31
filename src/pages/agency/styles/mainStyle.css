@@ -313,7 +313,7 @@ p {
   content: url("../assets/images/shape-1.svg");
 }
 
-#facts {
+#facts > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -399,7 +399,7 @@ p {
     }
   }
 
-  #facts {
+  #facts > div {
     gap: 5rem;
   }
 }
