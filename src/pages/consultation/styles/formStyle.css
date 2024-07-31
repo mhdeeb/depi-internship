@@ -90,19 +90,19 @@ section#form > .container {
   margin-inline-start: auto;
   animation: appear 1s ease-out, from-right 1s ease-out;
 
-  & label {
+  label {
     font-size: 1.5rem;
     font-weight: bold;
   }
 
-  & input {
+  input {
     padding: 2rem 1.2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     font-size: 1.5rem;
   }
 
-  & select {
+  select {
     padding: 1.8rem 1.2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -124,7 +124,7 @@ section#cta > div {
   animation: appear 1s ease-out 800ms forwards,
     from-bottom 1s ease-out 800ms forwards;
 
-  & span {
+  span {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: bold;

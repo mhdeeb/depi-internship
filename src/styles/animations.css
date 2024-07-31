@@ -1,24 +1,32 @@
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+html {
+  --duration: 1s;
+  --delay: 0s;
+  --initial-opacity: 0;
+  --final-opacity: 1;
+  --direction: none;
 }
 
-@keyframes appear-partial {
+@keyframes appear {
   0% {
-    opacity: 0;
+    opacity: var(--initial-opacity);
   }
   100% {
-    opacity: 0.65;
+    opacity: var(--final-opacity);
   }
 }
 
 @keyframes from-top {
   0% {
     transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes from-right {
+  0% {
+    transform: translateX(50px);
   }
   100% {
     transform: translateY(0);
@@ -43,11 +51,8 @@
   }
 }
 
-@keyframes from-right {
-  0% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.animation__appear {
+  opacity: 0;
+  animation: appear var(--duration) ease-out var(--delay) forwards,
+    var(--direction) var(--duration) ease-out var(--delay) forwards;
 }

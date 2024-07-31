@@ -30,18 +30,30 @@ html {
   font-size: 62.5%;
   font-family: "Gilroy", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding: 90px;
+  scroll-padding: 10rem;
 
-  &[data-scroll="0"],
   &[data-scroll="NaN"] {
+    .side-nav > a {
+      :first-child {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      :last-child {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &[data-scroll="0"] {
     .side-nav > a:first-child {
       opacity: 0;
       pointer-events: none;
     }
   }
 
-  &[data-scroll="1"],
-  &[data-scroll="NaN"] {
+  &[data-scroll="1"] {
     .side-nav > a:last-child {
       opacity: 0;
       pointer-events: none;
@@ -59,11 +71,10 @@ html {
   bottom: 6rem;
   z-index: 9999;
 
-  & > a {
+  > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 200ms ease-out;
 
     padding: 1rem;
     background-color: hsl(from var(--secondary-color) h s l / 0.4);
@@ -127,7 +138,7 @@ hr {
 
 .progressive.progressive--loaded {
   filter: blur(0);
-  & > img {
+  > img {
     opacity: 1;
   }
 }
@@ -183,4 +194,8 @@ blockquote p::before {
 
 blockquote p::after {
   content: "\201D";
+}
+
+.flex {
+  display: flex;
 }

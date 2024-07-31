@@ -28,13 +28,12 @@ header::before {
   padding-inline: 17rem;
   width: 100%;
   transition: background-color 0.25s;
-  animation: appear 1s ease-out forwards;
 
-  & img {
+  img {
     filter: brightness(0%);
   }
 
-  & ul {
+  ul {
     display: flex;
     gap: 4rem;
     font-size: 1.5rem;
@@ -42,12 +41,12 @@ header::before {
     margin-inline-start: 1.7rem;
   }
 
-  & > :last-child {
+  > :last-child {
     margin-inline-start: auto;
   }
 }
 
-html:not([data-scroll="0"]):not([data-scroll="NaN"]) .nav-bar {
+html:not([data-scroll="0"], [data-scroll="NaN"]) .nav-bar {
   background-color: #161c2d55;
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
@@ -58,7 +57,7 @@ nav {
   display: flex;
   justify-content: space-around;
 
-  & a {
+  a {
     color: var(--text-color);
     transition: text-shadow 250ms, color 250ms;
 
@@ -76,100 +75,90 @@ nav {
   flex-wrap: wrap;
 }
 
+.span--title {
+  color: #f64b4b;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.163rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  padding-block-start: 2rem;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin-block-start: 2.3rem;
+  font-size: 3.6rem;
+  font-weight: bold;
+  max-width: 56rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-block-start: 4rem;
+}
+
+p {
+  opacity: 70%;
+}
+
 .head__text {
   padding-block: 18.5rem 14rem;
   max-width: 60rem;
 
-  & span {
+  span {
     margin-inline-start: 1rem;
-    color: #f64b4b;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.163rem;
-
-    animation: appear 1s ease-out forwards;
   }
 
-  & h1 {
-    padding-block-start: 2rem;
-    font-size: 6rem;
-    font-weight: bold;
-    opacity: 0;
-    animation: from-top 1s ease-out forwards, appear 1s ease-out forwards;
-  }
-
-  & p {
+  p {
     font-size: 1.9rem;
     margin-block: 3rem;
     line-height: 3.2rem;
     max-width: 52rem;
-    opacity: 0;
-    animation: from-left 1s ease-out 0.5s forwards,
-      appear-partial 1s ease-out 0.5s forwards;
   }
 }
 
 .head__image {
+  isolation: isolate;
   position: relative;
 
-  & > :first-child {
+  > :first-child {
     border-radius: 50%;
-
-    animation: from-right 1s ease-out forwards;
   }
 
-  & > :not(:first-child) {
+  > :not(:first-child) {
     position: absolute;
-
-    opacity: 0;
   }
 
-  & > :nth-child(2) {
+  > :nth-child(2) {
     top: -4rem;
     left: 9.5rem;
     z-index: -1;
-
-    animation: from-right 1s ease-out 500ms forwards,
-      appear 1s ease-out 500ms forwards;
   }
 
-  & > :nth-child(3) {
+  > :nth-child(3) {
     bottom: 3rem;
     left: 0;
     z-index: 1;
-
-    animation: from-right 1s ease-out 500ms forwards,
-      appear 1s ease-out 500ms forwards;
   }
 
-  & > :last-child {
+  > :last-child {
     bottom: 5.5rem;
     right: 2.5rem;
     z-index: 1;
-
-    animation: from-right 1s ease-out 500ms forwards,
-      appear 1s ease-out 500ms forwards;
   }
 }
 
 #services {
   text-align: center;
   position: relative;
-  margin-block: 11.7rem 5.3rem;
+  padding-block: 11.7rem 5.3rem;
 
-  & > span {
-    font-size: 1.3rem;
-    color: #f64b4b;
-    letter-spacing: 0.163rem;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  & > h2 {
-    margin-block-start: 2.3rem;
-    font-size: 3.6rem;
-    font-weight: bold;
-    max-width: 56rem;
+  h2 {
     margin-inline: auto;
   }
 }
@@ -208,27 +197,20 @@ nav {
     box-shadow: 0px 0px 20px var(--shadow-color);
   }
 
-  & img {
+  img {
     width: 11.8rem;
     height: 13.3rem;
     margin-inline: auto;
     margin-block-start: 3rem;
   }
 
-  & h3 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    margin-block-start: 4rem;
-  }
-
-  & p {
+  p {
     font-size: 1.7rem;
     margin-block-start: 1.5rem;
     line-height: 2.9rem;
-    opacity: 0.65;
   }
 
-  & span {
+  span {
     display: block;
     margin-block-start: 4.3rem;
     font-size: 1.7rem;
@@ -255,21 +237,25 @@ nav {
   display: flex;
   gap: 4rem;
 
-  & > img {
+  > img {
     width: 16.4rem;
     aspect-ratio: 1;
     border-radius: 50%;
   }
 
-  & > div {
-    & blockquote {
+  > div {
+    blockquote {
       font-size: 2.4rem;
       line-height: 3.4rem;
       font-weight: bold;
       margin-block: 2.5rem;
+
+      > p {
+        opacity: 1;
+      }
     }
 
-    & span {
+    span {
       display: inline-block;
       margin-block-start: auto;
       margin-inline-end: 0.5rem;
@@ -280,6 +266,78 @@ nav {
       }
     }
   }
+}
+
+#about {
+  padding-block-start: 12rem;
+
+  .flex {
+    gap: 9rem;
+  }
+}
+
+.about__images {
+  position: relative;
+  padding-block-start: 5rem;
+  > img {
+    width: 445px;
+    height: 565px;
+    margin-block-start: 7rem;
+  }
+
+  .flex > img {
+    align-self: end;
+    margin-block-end: 5rem;
+    width: 160px;
+    height: 167px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  p {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    letter-spacing: -0.2px;
+    display: inline-block;
+    margin-block-start: 10rem;
+  }
+}
+
+.about__images::before {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  inset-inline: 72%;
+  width: 10rem;
+  aspect-ratio: 1;
+  content: url("../assets/images/shape-1.svg");
+}
+
+#facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-block: 12rem 11rem;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fact span:first-child {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.fact span:last-child {
+  font-size: 1.9rem;
+  text-align: center;
+  opacity: 70%;
+  width: 31rem;
 }
 
 @media screen and (max-width: 1200px) {

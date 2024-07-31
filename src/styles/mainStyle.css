@@ -13,7 +13,7 @@ ol {
   font-weight: bold;
   list-style: none;
 
-  & li {
+  li {
     -webkit-mask-image: linear-gradient(to right, #ffffffff, #ffffff00);
     mask-image: linear-gradient(to right, #ffffffff, #ffffff00);
     background-size: cover;

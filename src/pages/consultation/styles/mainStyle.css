@@ -230,7 +230,7 @@ section#perks {
   text-align: left;
   counter-reset: item;
 
-  & > li {
+  > li {
     counter-increment: item;
 
     + li {
@@ -253,14 +253,14 @@ section#perks {
       margin-block-start: 0.6rem;
     }
 
-    & > span {
+    > span {
       display: block;
       font-size: 2.1rem;
       font-weight: bold;
       margin-block-end: 1rem;
     }
 
-    & > p {
+    > p {
       line-height: 2.9rem;
       font-size: 1.7rem;
       opacity: 0.7;
@@ -373,24 +373,24 @@ footer {
   flex-direction: column;
   gap: 2rem;
 
-  & span {
+  span {
     font-size: 1.5rem;
     opacity: 0.7;
     margin-block-end: 2rem;
   }
 
-  & a {
+  a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.7rem;
   }
 
-  & a:hover {
+  a:hover {
     text-decoration: underline;
   }
 
   &:last-of-type {
-    & a {
+    a {
       color: var(--secondary-color);
       font-weight: bold;
     }
@@ -404,7 +404,7 @@ footer {
   padding-block: 3rem 3.6rem;
   border-top: 1px solid var(--border-color);
 
-  & span img {
+  span img {
     display: inline-block;
     margin-inline-start: 1rem;
   }
