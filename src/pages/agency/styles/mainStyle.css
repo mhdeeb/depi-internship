@@ -279,6 +279,7 @@ p {
 .about__images {
   position: relative;
   padding-block-start: 5rem;
+
   > img {
     width: 445px;
     height: 565px;
@@ -338,6 +339,20 @@ p {
   text-align: center;
   opacity: 70%;
   width: 31rem;
+}
+
+#features {
+  background: var(--bg-perks);
+}
+
+#features::before {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  inset-inline: 72%;
+  width: 10rem;
+  aspect-ratio: 1;
+  content: url("../assets/images/shape-1.svg");
 }
 
 @media screen and (max-width: 1200px) {
