@@ -1,0 +1,173 @@
+@import url("../../../styles/global.css");
+
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes start {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: var(--rotate);
+  }
+}
+
+.clock {
+  --hour: 0;
+  --minute: 0;
+  --second: 0;
+
+  width: min(50%, 50vh);
+
+  margin-block: min(50%, 5vh);
+
+  container-type: inline-size;
+  aspect-ratio: 1;
+
+  position: relative;
+  color: #fff;
+  background: url("../assets/images/boo.jpg"), radial-gradient(#8f8f8fe3, #000);
+  background-size: cover;
+  background-blend-mode: overlay;
+  text-shadow: 0 0 5px #fff;
+  font-family: "Roboto", sans-serif;
+
+  border-radius: 50%;
+  border: 0.3cqw solid var(--border-color);
+
+  .text,
+  .ticks,
+  .bticks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    font-size: 10cqw;
+
+    > li {
+      --rotate: calc(360deg / 12 * var(--unit, 0));
+      rotate: var(--rotate);
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-block: 0.2em;
+
+      &::before {
+        color: var(--bg-color);
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .text {
+    counter-reset: item;
+
+    > li {
+      padding-block: 0.3em;
+      counter-increment: item;
+
+      &::after {
+        content: counter(item);
+      }
+    }
+  }
+
+  .ticks {
+    > li {
+      --rotate: calc(360deg / 60 * var(--unit, 0));
+
+      animation: start 1s ease forwards;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0.5cqw;
+        height: 1cqw;
+        background: var(--bg-color);
+        border-radius: 1cqw;
+      }
+    }
+  }
+
+  .bticks {
+    > li {
+      animation: start 1s ease forwards;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 1cqw;
+        height: 3cqw;
+        background: var(--bg-color);
+        border-radius: 1cqw;
+      }
+    }
+  }
+
+  .clock__hour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5cqw;
+    height: 25%;
+    transform: translate(-50%, 0);
+    rotate: calc(var(--hour, 0) * 30deg + 180deg);
+    border-radius: 100px;
+    transform-origin: 0 0;
+    background: #f00;
+  }
+
+  .clock__minute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1cqw;
+    height: 35%;
+    transform: translate(-50%, 0);
+    rotate: calc(var(--minute, 0) * 6deg + 180deg);
+    border-radius: 100px;
+    transform-origin: 0 0;
+    background: #0f0;
+  }
+
+  .clock__second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.5cqw;
+    height: 40%;
+    transform: translate(-50%, 0);
+    rotate: calc(var(--second, 0) * 6deg + 180deg);
+    border-radius: 100px;
+    transform-origin: 0 0;
+    background: #00f;
+  }
+
+  .clock__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5cqw;
+    aspect-ratio: 1;
+    background: var(--bg-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #fff;
+  }
+}
+
+.digital-clock {
+  text-align: center;
+  font-size: min(10vw, 10vh);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--bg-color);
+  letter-spacing: 0.5rem;
+  text-shadow: 0 0 5px #fff;
+}
