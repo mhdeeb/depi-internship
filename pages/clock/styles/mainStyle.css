@@ -119,8 +119,10 @@ body {
     transform: translate(-50%, 0);
     rotate: calc(var(--hour, 0) * 30deg + 180deg);
     border-radius: 100px;
+    border: 2px solid #fff;
     transform-origin: 0 0;
-    background: #f00;
+    box-shadow: 0 0 10px #000;
+    background: #000;
   }
 
   .clock__minute {
@@ -132,8 +134,10 @@ body {
     transform: translate(-50%, 0);
     rotate: calc(var(--minute, 0) * 6deg + 180deg);
     border-radius: 100px;
+    border: 1px solid #fff;
     transform-origin: 0 0;
-    background: #0f0;
+    box-shadow: 0 0 10px #5b3322;
+    background: #5b3322;
   }
 
   .clock__second {
@@ -146,7 +150,8 @@ body {
     rotate: calc(var(--second, 0) * 6deg + 180deg);
     border-radius: 100px;
     transform-origin: 0 0;
-    background: #00f;
+    box-shadow: 0 0 10px #f5ae8a;
+    background: #f5ae8a;
   }
 
   .clock__center {
