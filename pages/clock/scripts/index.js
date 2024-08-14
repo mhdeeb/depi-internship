@@ -13,7 +13,7 @@ function updateClock() {
 
   digital.textContent = now.toLocaleTimeString();
 
-  setTimeout(updateClock, 1000);
+  setTimeout(updateClock, 500);
 }
 
 function setNumbers() {
