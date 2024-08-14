@@ -24,7 +24,7 @@ body {
 
   width: min(50%, 50vh);
 
-  margin-block: min(50%, 5vh);
+  margin-block: min(25%, 25vh) min(5%, 5vh);
 
   container-type: inline-size;
   aspect-ratio: 1;
